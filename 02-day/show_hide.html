@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> show and hide </title>
+</head>
+<body>
+    <p id="text">
+        hello afzal
+    </p>
+    <button onlick="toggletext()"> show and hide</button>
+
+    <script>
+        function toggletext(){
+            let t=document.getElementById("text");
+            if(t.style.display==="none"){
+                t.style.display="block";
+            }else{
+                t.style.display="none";
+            }
+        }
+    </script>
+    
+</body>
+</html>
