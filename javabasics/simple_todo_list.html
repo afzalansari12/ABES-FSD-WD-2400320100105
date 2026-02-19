@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+    <style>
+        h1{
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To Do List</h1>
+
+    <input id="task">
+    <button onclick="add()">Add</button>
+    <ul id="list"></ul>
+
+    <ul id="list"></ul>
+
+    <script>
+        let tasks = [];
+
+        function add(){
+            let input = document.getElementById("task");
+
+            if(input.value !== ""){
+                tasks.push(.value);
+                input.value = "";
+                show();
+            }
+        }
+
+        function show(){
+            let list = document.getElementById("list");
+            list.innerHTML = "";
+
+            for(let i = 0; i < tasks.length; i++){
+                list.innerHTML += "<li>" + tasks[i] + "</li>";
+            }
+        }
+    </script>
+
+</body>
+</html>
